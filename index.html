@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HELLO, BUSAN FOOD 2027</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Monoton&display=swap">
+<style>
+:root{--bg:#1a1240;--bg2:#2a1a5e;--pink:#ff4f9a;--cyan:#42f0e6;--yel:#ffc93c;--paper:#fff3d6;--ink:#2b1646;--txt:#f6efff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{color-scheme:dark;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--txt);font-family:"Noto Sans KR","Noto Sans JP",system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+.disp{font-family:"Black Han Sans","Noto Sans KR","Noto Sans JP",sans-serif;font-weight:400}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+.lang{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;z-index:20;display:flex;border:2px solid var(--cyan);border-radius:99px;overflow:hidden;background:var(--bg)}
+.lang button{font:700 13px "Noto Sans KR","Noto Sans JP",sans-serif;padding:6px 12px;border:0;background:none;color:var(--cyan);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--cyan);color:var(--ink)}
+.lang button:focus-visible,a:focus-visible{outline:3px solid var(--yel);outline-offset:2px}
+
+/* hero */
+.hero{position:relative;text-align:center;padding:84px 0 56px;background:
+ radial-gradient(circle at 50% 38%,rgba(255,79,154,.35),transparent 55%),
+ repeating-conic-gradient(from 0deg at 50% 38%,var(--bg2) 0 7.5deg,var(--bg) 7.5deg 15deg)}
+.hello{font-family:"Monoton","Black Han Sans",cursive;font-size:clamp(46px,17vw,84px);line-height:1;color:#ffd1e6;
+ text-shadow:0 0 6px var(--pink),0 0 18px var(--pink),0 0 42px var(--pink);animation:flick 1.6s steps(1) 1 both}
+.busan{font-family:"Monoton","Black Han Sans",cursive;font-size:clamp(44px,16vw,80px);line-height:1.05;color:#d6fffb;margin-top:4px;
+ text-shadow:0 0 6px var(--cyan),0 0 18px var(--cyan),0 0 40px var(--cyan)}
+@keyframes flick{0%,18%,22%,60%{opacity:.25}20%,40%,100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.hello{animation:none}}
+.sub{font-size:clamp(22px,7vw,30px);margin-top:18px;color:var(--yel);text-shadow:0 0 12px rgba(255,201,60,.6)}
+.tag{margin:14px auto 0;max-width:30em;color:#e3d8ff;font-size:15px}
+.date{display:inline-block;margin-top:28px;padding:14px 26px;background:var(--paper);color:var(--ink);border-radius:6px;
+ border:4px double var(--pink);transform:rotate(-2deg)}
+.date b{display:block;font-size:clamp(24px,8vw,34px)}
+.date span{font-size:14px;font-weight:700}
+.free{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.chip{padding:6px 14px;border-radius:99px;font-weight:700;font-size:14px;border:2px solid var(--yel);color:var(--yel)}
+.chip.f{background:var(--yel);color:var(--ink)}
+
+/* bulbs divider */
+.bulbs{height:14px;background:radial-gradient(circle,var(--yel) 0 4px,transparent 5px) 0 50%/28px 14px repeat-x;filter:drop-shadow(0 0 4px var(--yel))}
+
+section{padding:48px 0 8px}
+h2{font-size:30px;color:var(--cyan);text-shadow:0 0 10px rgba(66,240,230,.55);margin-bottom:6px}
+.lead{color:#cfc3f2;font-size:14px;margin-bottom:20px}
+
+/* experience */
+.exp{display:grid;gap:14px}
+.card{background:var(--bg2);border:2px solid var(--pink);border-radius:14px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 0 0 4px var(--bg),0 0 18px rgba(255,79,154,.35)}
+.card .ic{font-size:34px;line-height:1}
+.card h3{font-size:18px;color:#fff}
+.card p{font-size:14px;color:#d9ceff}
+.card .pr{margin-top:6px;font-weight:700;color:var(--yel);font-size:14px}
+
+.card.c2{border-color:var(--cyan);box-shadow:0 0 0 4px var(--bg),0 0 18px rgba(66,240,230,.3)}
+/* menu board */
+.board{background:var(--paper);color:var(--ink);border-radius:8px;padding:22px 20px;border:6px solid #7a3b1d;box-shadow:0 0 0 3px var(--yel)}
+.board h2{color:#b3123f;text-shadow:none;text-align:center;font-size:28px}
+.board .lead{color:#6a4a52;text-align:center}
+.row{display:flex;align-items:baseline;gap:8px;padding:9px 0}
+.row .n{font-weight:700;font-size:16px}
+.row .d{flex:1;border-bottom:2px dotted #b99d86;transform:translateY(-4px)}
+.row .p{font-weight:700;color:#b3123f;font-size:17px}
+.row small{display:block;font-weight:400;font-size:12px;color:#7b6368;line-height:1.3}
+.note{margin-top:10px;font-size:12px;color:#7b6368;text-align:center}
+
+/* dialect */
+.say{background:linear-gradient(135deg,#3a1b6e,#6b1f64);border-radius:16px;padding:20px;border:2px dashed var(--cyan)}
+.say h3{font-size:20px;color:var(--yel);margin-bottom:10px}
+.line{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:15px}
+.line:last-child{border:0}
+.line em{font-style:normal;font-weight:700;color:#fff}
+.line span{color:#cfc3f2;text-align:right}
+
+/* schedule */
+.tl{border-left:3px solid var(--pink);margin-left:8px;padding-left:18px}
+.tl div{position:relative;padding:6px 0 14px}
+.tl div::before{content:"";position:absolute;left:-26px;top:13px;width:11px;height:11px;border-radius:50%;background:var(--yel);box-shadow:0 0 8px var(--yel)}
+.tl b{color:var(--yel)}
+
+/* place */
+.place{background:var(--bg2);border-radius:14px;padding:20px;border:2px solid var(--cyan)}
+.place p+p{margin-top:6px}
+
+footer{text-align:center;padding:40px 0 48px;color:#b9abe6;font-size:13px}
+footer .disp{font-size:20px;color:var(--pink);text-shadow:0 0 10px var(--pink);margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="lang" role="group" aria-label="Language">
+  <button id="ko" aria-pressed="true">KO</button><button id="en" aria-pressed="false">EN</button><button id="ja" aria-pressed="false">JA</button>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hello">HELLO,</div>
+    <div class="busan">BUSAN FOOD</div>
+    <p class="sub disp t" data-ko="안녕, 부산의 맛" data-en="Welcome to the taste of Busan" data-ja="ようこそ、釜山の味へ">안녕, 부산의 맛</p>
+    <p class="tag t" data-ko="돼지국밥, 밀면, 어묵, 씨앗호떡까지. 부산 사람들이 사랑하는 한식을 직접 먹고, 만들고, 즐겨 보는 3일." data-en="Pork soup, cold noodles, fish cake and hotteok. Three days to eat, make and enjoy Busan’s favorite Korean food." data-ja="豚クッパ、ミルミョン、おでん、シアッホットクまで。釜山の人々が愛する韓国料理を食べて、作って、楽しむ3日間。">돼지국밥, 밀면, 어묵, 씨앗호떡까지. 부산 사람들이 사랑하는 한식을 직접 먹고, 만들고, 즐겨 보는 3일.</p>
+    <div class="date">
+      <b>2027.10.22 – 24</b>
+      <span class="t" data-ko="금 · 토 · 일  |  벡스코 제1전시장" data-en="Fri – Sun  |  BEXCO Hall 1, Busan" data-ja="金・土・日 | BEXCO 第1展示場（釜山）">금 · 토 · 일  |  벡스코 제1전시장</span>
+    </div>
+    <div class="free">
+      <span class="chip f t" data-ko="입장 무료" data-en="Free entry" data-ja="入場無料">입장 무료</span>
+      <span class="chip t" data-ko="음식·체험은 현장 결제" data-en="Pay for food on site" data-ja="飲食・体験は現地払い">음식·체험은 현장 결제</span><span class="chip t" data-ko="여권 지참 시 환영 음료 무료" data-en="Show your passport: free welcome drink" data-ja="パスポート提示でドリンク無料">여권 지참 시 환영 음료 무료</span>
+    </div>
+  </div>
+</header>
+<div class="bulbs"></div>
+
+<main class="wrap">
+  <section>
+    <h2 class="disp t" data-ko="해 보는 부산" data-en="Do Busan" data-ja="釜山を体験">해 보는 부산</h2>
+    <p class="lead t" data-ko="구경만 하지 않아요. 체험 두 가지와 요리 경연대회가 열립니다." data-en="Not just looking. Two workshops and a cooking contest." data-ja="見るだけじゃない。体験2つと料理コンテストがあります。">구경만 하지 않아요. 체험 두 가지와 요리 경연대회가 열립니다.</p>
+    <div class="exp">
+      <div class="card"><div class="ic">🍢</div><div><h3 class="t" data-ko="어묵 직접 만들기" data-en="Make your own fish cake" data-ja="おでんを自分で作ろう">어묵 직접 만들기</h3><p class="t" data-ko="반죽을 빚고 튀겨, 따끈한 어묵을 바로 맛봐요." data-en="Shape the paste, fry it and eat it hot." data-ja="すり身を成形して揚げ、熱々をその場で味わいます。">반죽을 빚고 튀겨, 따끈한 어묵을 바로 맛봐요.</p><div class="pr t" data-ko="8,000원 · 30분" data-en="₩8,000 · 30 min" data-ja="8,000ウォン・30分">8,000원 · 30분</div></div></div>
+      <div class="card"><div class="ic">🥞</div><div><h3 class="t" data-ko="씨앗호떡 만들기" data-en="Seed hotteok workshop" data-ja="シアッホットク体験">씨앗호떡 만들기</h3><p class="t" data-ko="반죽에 흑설탕을 채워 굽고, 견과류 씨앗을 듬뿍 올려요." data-en="Fill dough with brown sugar, griddle it and top with seeds." data-ja="生地に黒糖を包んで焼き、ナッツや種をたっぷりのせます。">반죽에 흑설탕을 채워 굽고, 견과류 씨앗을 듬뿍 올려요.</p><div class="pr t" data-ko="6,000원 · 25분" data-en="₩6,000 · 25 min" data-ja="6,000ウォン・25分">6,000원 · 25분</div></div></div>
+      <div class="card"><div class="ic">🏆</div><div><h3 class="t" data-ko="부산 한식요리경연대회" data-en="Busan Korean Cuisine Cooking Contest" data-ja="釜山韓国料理コンテスト">부산 한식요리경연대회</h3><p class="t" data-ko="외국인 참가자도 도전! 부산 대표 한식으로 실력을 겨루는 요리 경연이에요." data-en="International visitors welcome. Compete by cooking classic Busan Korean dishes." data-ja="外国人の方も参加OK。釜山の代表的な韓国料理で腕を競います。">외국인 참가자도 도전! 부산 대표 한식으로 실력을 겨루는 요리 경연이에요.</p><div class="pr t" data-ko="관람 무료 · 참가팀 모집" data-en="Free to watch · Teams wanted" data-ja="観覧無料・参加チーム募集">관람 무료 · 참가팀 모집</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="disp t" data-ko="외국인 관광객 환영" data-en="Welcome, travelers" data-ja="海外からの旅行者を歓迎">외국인 관광객 환영</h2>
+    <p class="lead t" data-ko="한국 여행 중이라면 놓치지 마세요. (혜택은 기획안 예시입니다)" data-en="Visiting Korea? Don’t miss it. (Perks are sample ideas for this proposal)" data-ja="韓国旅行中の方はぜひお立ち寄りください。（特典は企画案の例です）">한국 여행 중이라면 놓치지 마세요. (혜택은 기획안 예시입니다)</p>
+    <div class="exp"><div class="card c2"><div class="ic">🛂</div><div><h3 class="t" data-ko="여권 지참 시 환영 음료" data-en="Free welcome drink with passport" data-ja="パスポート提示でウェルカムドリンク">여권 지참 시 환영 음료</h3><p class="t" data-ko="외국 여권을 보여 주면 입장과 함께 음료 한 잔을 드려요." data-en="Show a foreign passport at the gate and get a drink." data-ja="外国のパスポートを提示すると、ドリンク1杯をプレゼントします。">외국 여권을 보여 주면 입장과 함께 음료 한 잔을 드려요.</p></div></div><div class="card c2"><div class="ic">🌐</div><div><h3 class="t" data-ko="한·영·일 안내와 통역 도우미" data-en="Guides in Korean, English and Japanese" data-ja="韓・英・日のご案内と通訳スタッフ">한·영·일 안내와 통역 도우미</h3><p class="t" data-ko="메뉴판과 체험 안내를 3개 언어로 준비하고 통역 도우미가 함께해요." data-en="Menus and workshop guides in three languages, with interpreter helpers." data-ja="メニューと体験の案内は3言語。通訳スタッフもいます。">메뉴판과 체험 안내를 3개 언어로 준비하고 통역 도우미가 함께해요.</p></div></div><div class="card c2"><div class="ic">🏖️</div><div><h3 class="t" data-ko="해운대·센텀시티와 가까워요" data-en="Close to Haeundae and Centum City" data-ja="海雲台・センタムシティが近い">해운대·센텀시티와 가까워요</h3><p class="t" data-ko="행사 전후로 해운대 해수욕장과 센텀시티 관광을 함께 즐길 수 있어요." data-en="Pair the expo with Haeundae Beach and Centum City sightseeing." data-ja="イベントの前後に海雲台海水浴場やセンタムシティの観光も楽しめます。">행사 전후로 해운대 해수욕장과 센텀시티 관광을 함께 즐길 수 있어요.</p></div></div><div class="card c2"><div class="ic">📱</div><div><h3 class="t" data-ko="QR 하나로 3개 언어" data-en="One QR, three languages" data-ja="QR1つで3言語">QR 하나로 3개 언어</h3><p class="t" data-ko="포스터의 QR을 찍으면 한국어, 영어, 일본어 안내를 바로 볼 수 있어요." data-en="Scan the poster’s QR for Korean, English or Japanese info." data-ja="ポスターのQRで韓国語・英語・日本語の案内をすぐ確認できます。">포스터의 QR을 찍으면 한국어, 영어, 일본어 안내를 바로 볼 수 있어요.</p></div></div></div>
+  </section>
+
+  <section>
+    <div class="board">
+      <h2 class="disp t" data-ko="오늘의 메뉴판" data-en="Today’s menu" data-ja="本日のメニュー">오늘의 메뉴판</h2>
+      <p class="lead t" data-ko="부산이 사랑하는 한 상" data-en="A Busan table, one dish at a time" data-ja="釜山が愛する一膳">부산이 사랑하는 한 상</p>
+      <div class="row"><div class="n"><span class="t" data-ko="돼지국밥" data-en="Dwaeji-gukbap" data-ja="テジクッパ">돼지국밥</span><small class="t" data-ko="진하게 우린 돼지 육수에 밥 말이" data-en="Rice in rich pork broth" data-ja="濃厚な豚の出汁にご飯を入れた一品">진하게 우린 돼지 육수에 밥 말이</small></div><div class="d"></div><div class="p">9,000</div></div>
+      <div class="row"><div class="n"><span class="t" data-ko="밀면" data-en="Milmyeon" data-ja="ミルミョン">밀면</span><small class="t" data-ko="새콤달콤 시원한 부산식 냉면" data-en="Chilled wheat noodles, sweet and tangy" data-ja="甘酸っぱい冷たい釜山風小麦麺">새콤달콤 시원한 부산식 냉면</small></div><div class="d"></div><div class="p">8,000</div></div>
+      <div class="row"><div class="n"><span class="t" data-ko="삼겹살 구이" data-en="Grilled samgyeopsal" data-ja="サムギョプサル焼き">삼겹살 구이</span><small class="t" data-ko="1인분 · 쌈과 반찬 포함" data-en="Per person · wraps and sides included" data-ja="1人前・サンチュとおかず付き">1인분 · 쌈과 반찬 포함</small></div><div class="d"></div><div class="p">15,000</div></div>
+      <div class="row"><div class="n"><span class="t" data-ko="부산 어묵 꼬치" data-en="Busan fish cake skewer" data-ja="釜山おでん串">부산 어묵 꼬치</span><small class="t" data-ko="국물 한 컵 포함" data-en="Comes with a cup of broth" data-ja="スープ1杯付き">국물 한 컵 포함</small></div><div class="d"></div><div class="p">2,000</div></div>
+      <div class="row"><div class="n"><span class="t" data-ko="씨앗호떡" data-en="Seed hotteok" data-ja="シアッホットク">씨앗호떡</span><small class="t" data-ko="갓 구운 따끈한 간식" data-en="Fresh off the griddle" data-ja="焼きたてアツアツ">갓 구운 따끈한 간식</small></div><div class="d"></div><div class="p">3,000</div></div>
+      <p class="note t" data-ko="단위: 원 · 가격은 기획안 예시입니다" data-en="Prices in KRW · sample prices for this proposal" data-ja="単位：ウォン・価格は企画案の例です">단위: 원 · 가격은 기획안 예시입니다</p>
+    </div>
+  </section>
+
+  
+
+  <section>
+    <h2 class="disp t" data-ko="하루 일정" data-en="Daily schedule" data-ja="1日のスケジュール">하루 일정</h2>
+    <p class="lead t" data-ko="3일 모두 같은 시간표로 열려요." data-en="Same timetable all three days." data-ja="3日間とも同じ時間割です。">3일 모두 같은 시간표로 열려요.</p>
+    <div class="tl">
+      <div><b>10:00</b> <span class="t" data-ko="개장 · 환영 음료" data-en="Doors open · welcome drink" data-ja="開場・ウェルカムドリンク">개장 · 환영 음료</span></div>
+      <div><b>12:00</b> <span class="t" data-ko="부산 한식요리경연대회" data-en="Busan Korean Cuisine Cooking Contest" data-ja="釜山韓国料理コンテスト">부산 한식요리경연대회</span></div>
+      <div><b>14:00</b> <span class="t" data-ko="어묵 만들기 클래스" data-en="Fish cake class" data-ja="おでん作りクラス">어묵 만들기 클래스</span></div>
+      <div><b>16:00</b> <span class="t" data-ko="씨앗호떡 클래스" data-en="Hotteok class" data-ja="ホットククラス">씨앗호떡 클래스</span></div>
+      <div><b>18:00</b> <span class="t" data-ko="폐장" data-en="Close" data-ja="閉場">폐장</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="place">
+      <h2 class="disp t" data-ko="오시는 길" data-en="Getting here" data-ja="アクセス">오시는 길</h2>
+      <p><b class="t" data-ko="벡스코 제1전시장" data-en="BEXCO Hall 1" data-ja="BEXCO 第1展示場">벡스코 제1전시장</b></p>
+      <p class="t" data-ko="부산 해운대구 APEC로 55" data-en="55 APEC-ro, Haeundae-gu, Busan" data-ja="釜山 海雲台区 APEC路 55">부산 해운대구 APEC로 55</p>
+      <p class="t" data-ko="지하철 2호선 벡스코역에서 도보 이동" data-en="Walk from BEXCO Station, Metro Line 2" data-ja="地下鉄2号線 BEXCO駅から徒歩">지하철 2호선 벡스코역에서 도보 이동</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="disp">HELLO, BUSAN FOOD 2027</div>
+  <div class="t" data-ko="안녕, 부산의 맛 · 입장 무료" data-en="Welcome to Busan’s flavors · Free entry" data-ja="ようこそ、釜山の味へ・入場無料">안녕, 부산의 맛 · 입장 무료</div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.t'),ids=['ko','en','ja'],b={};
+  ids.forEach(function(i){b[i]=document.getElementById(i)});
+  function set(l){
+    for(var i=0;i<els.length;i++){els[i].textContent=els[i].getAttribute('data-'+l)}
+    document.documentElement.lang=l;
+    ids.forEach(function(i){b[i].setAttribute('aria-pressed',i===l)});
+  }
+  ids.forEach(function(i){b[i].onclick=function(){set(i)}});
+  var nav=(navigator.language||'ko').toLowerCase();
+  if(nav.indexOf('ja')===0){set('ja')}else if(nav.indexOf('ko')!==0){set('en')}
+})();
+</script>
+</body>
+</html>
